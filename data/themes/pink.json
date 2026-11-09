@@ -1,0 +1,17 @@
+{
+    "description" : "",
+    "author" : "boo_manKnow",
+    "colors":{
+        "back_col": [245, 218, 241],
+        "displayBack_col": [185, 115, 199, 150],
+        "displayText_col": [250, 203, 72],
+        "displayTextShadow_col": [131, 33, 150],
+        "stone2_col": [0, 0, 0],
+        "stone1_col": [255, 255, 255],
+        "board_col": [255, 161, 235],
+        "boardFrame_col": [173, 76, 153, 150],
+        "grid_col": [255, 255, 255, 150],
+        "alertText_col": [235, 235, 235],
+        "bubble_col": [220, 24, 24]
+    }
+}

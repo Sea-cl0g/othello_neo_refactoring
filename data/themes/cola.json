@@ -1,0 +1,17 @@
+{
+    "description" : "Scathing and refreshing cola theme. Play Othello using bottle caps!!",
+    "author" : "boo_manKnow",
+    "colors":{
+        "back_col": [96, 51, 22],
+        "displayBack_col": [176, 5, 5, 150],
+        "displayText_col": [255, 255, 255],
+        "displayTextShadow_col": [0, 0, 0, 150],
+        "stone2_col": [196, 29, 29],
+        "stone1_col": [191, 191, 191],
+        "board_col": [31, 90, 169],
+        "boardFrame_col": [242, 201, 41],
+        "grid_col": [242, 201, 41, 200],
+        "alertText_col": [242, 201, 41],
+        "bubble_col": [255, 255, 255]
+    }
+}

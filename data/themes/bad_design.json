@@ -1,0 +1,17 @@
+{
+    "description" : "Oops! This is a color scheme theme that makes my eyes hurt just looking at it.",
+    "author" : "boo_manKnow",
+    "colors":{
+        "back_col": [255, 255, 0],
+        "displayBack_col": [0, 255, 255],
+        "displayText_col": [0, 0, 255],
+        "displayTextShadow_col": [0, 255, 0],
+        "stone2_col": [255, 0, 0],
+        "stone1_col": [0, 0, 255],
+        "board_col": [0, 255, 0],
+        "boardFrame_col": [255, 0, 0],
+        "grid_col": [255, 255, 255],
+        "alertText_col": [255, 255, 255],
+        "bubble_col": [0, 0, 0]
+    }
+}

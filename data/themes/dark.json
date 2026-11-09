@@ -1,0 +1,17 @@
+{
+    "description" : "A theme for programmers in tune. They believe that a black background is easy on the eyes.",
+    "author" : "boo_manKnow",
+    "colors":{
+        "back_col": [38, 38, 38],
+        "displayBack_col": [166, 166, 166, 150],
+        "displayText_col": [255, 255, 255],
+        "displayTextShadow_col": [83, 189, 240],
+        "stone2_col": [0, 0, 0],
+        "stone1_col": [255, 255, 255],
+        "board_col": [166, 166, 166],
+        "boardFrame_col": [166, 166, 166, 150],
+        "grid_col": [255, 255, 255, 150],
+        "alertText_col": [235, 235, 235],
+        "bubble_col": [83, 189, 240]
+    }
+}

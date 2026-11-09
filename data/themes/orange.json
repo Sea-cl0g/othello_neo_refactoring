@@ -1,0 +1,17 @@
+{
+    "description" : "A dark theme for programmers in tune. The gentle color scheme will challenge you for the long haul.",
+    "author" : "boo_manKnow",
+    "colors":{
+        "back_col": [255, 172, 64],
+        "displayBack_col": [69, 90, 255, 150],
+        "displayText_col": [255, 255, 255],
+        "displayTextShadow_col": [69, 90, 255, 225],
+        "stone2_col": [0, 0, 0],
+        "stone1_col": [255, 255, 255],
+        "board_col": [69, 90, 255],
+        "boardFrame_col": [50, 50, 50],
+        "grid_col": [0, 0, 0],
+        "alertText_col": [255, 255, 255],
+        "bubble_col": [255, 255, 255]
+    }
+}

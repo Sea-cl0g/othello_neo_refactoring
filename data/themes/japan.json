@@ -1,0 +1,17 @@
+{
+    "description" : "The theme seems to use a Japanese-style color scheme. Even the author, who is Japanese, does not know what is Japanese style.",
+    "author" : "boo_manKnow",
+    "colors":{
+        "back_col": [255, 255, 255],
+        "displayBack_col": [238, 187, 203, 150],
+        "displayText_col": [255, 185, 15],
+        "displayTextShadow_col": [69, 62, 45],
+        "stone2_col": [102, 156, 237],
+        "stone1_col": [255, 255, 255],
+        "board_col": [181, 158, 141],
+        "boardFrame_col": [61, 50, 41],
+        "grid_col": [61, 50, 41, 200],
+        "alertText_col": [214, 127, 227],
+        "bubble_col": [37, 207, 108]
+    }
+}
