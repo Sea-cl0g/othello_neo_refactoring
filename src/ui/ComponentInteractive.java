@@ -1,6 +1,6 @@
 package ui;
 
-import layout.Layout;
+import ui.layout.Layout;
 
 public abstract class ComponentInteractive extends Component {
     protected ComponentInteractive(Layout layout) {

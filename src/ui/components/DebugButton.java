@@ -1,9 +1,9 @@
 package ui.components;
 
-import layout.Bounds;
-import layout.Layout;
 import processing.core.PApplet;
 import ui.ComponentInteractive;
+import ui.layout.Bounds;
+import ui.layout.Layout;
 
 public class DebugButton extends ComponentInteractive {
     boolean clicked = false;

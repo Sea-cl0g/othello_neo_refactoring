@@ -2,8 +2,8 @@ package ui.components;
 
 import processing.core.PApplet;
 import ui.Component;
-import layout.Bounds;
-import layout.Layout;
+import ui.layout.Bounds;
+import ui.layout.Layout;
 
 public class SimpleRect extends Component {
     public SimpleRect(Layout layout) {

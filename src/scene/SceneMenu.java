@@ -1,10 +1,10 @@
 package scene;
 
 import processing.core.PApplet;
-import layout.Layout;
 import ui.Component;
 import ui.components.DebugButton;
 import ui.components.SimpleRect;
+import ui.layout.Layout;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package layout;
+package ui.layout;
 
 public class Bounds {
     private int x;

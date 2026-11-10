@@ -1,8 +1,8 @@
 package ui;
 
-import layout.Bounds;
-import layout.Layout;
 import processing.core.PApplet;
+import ui.layout.Bounds;
+import ui.layout.Layout;
 
 public abstract class Component {
     private final Bounds bounds = new Bounds(0, 0, 0, 0);
@@ -14,6 +14,10 @@ public abstract class Component {
 
     protected Bounds getBounds() {
         return bounds;
+    }
+
+    public Layout getLayout() {
+        return layout;
     }
 
     public void applyLayout(int width, int height) {
