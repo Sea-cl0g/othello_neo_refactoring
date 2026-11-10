@@ -1,17 +1,17 @@
 package ui.components;
 
+import layout.Bounds;
 import processing.core.PApplet;
-import ui.BoundingBox;
 import ui.Component;
 
 public class SimpleRect extends Component {
-    public SimpleRect(BoundingBox bounds) {
+    public SimpleRect(Bounds bounds) {
         super(bounds);
     }
 
     @Override
     public void draw(PApplet app) {
-        BoundingBox bounds = getBounds();
+        Bounds bounds = getBounds();
 
         app.pushStyle();
         app.rectMode(PApplet.CENTER);

@@ -1,12 +1,12 @@
-package ui;
+package layout;
 
-public class BoundingBox {
+public class Bounds {
     private int x;
     private int y;
     private int w;
     private int h;
 
-    public BoundingBox(int x, int y, int w, int h) {
+    public Bounds(int x, int y, int w, int h) {
         this.x = x;
         this.y = y;
         this.w = w;

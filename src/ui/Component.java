@@ -1,15 +1,16 @@
 package ui;
 
+import layout.Bounds;
 import processing.core.PApplet;
 
 public abstract class Component {
-    private BoundingBox bounds;
+    private Bounds bounds;
 
-    protected Component(BoundingBox bouds) {
+    protected Component(Bounds bouds) {
         this.bounds = bouds;
     }
 
-    protected BoundingBox getBounds() {
+    protected Bounds getBounds() {
         return bounds;
     }
 

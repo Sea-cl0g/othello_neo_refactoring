@@ -1,7 +1,7 @@
 package scene;
 
 import processing.core.PApplet;
-import ui.BoundingBox;
+import layout.Bounds;
 import ui.Component;
 import ui.components.SimpleRect;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ public class SceneMenu implements Scene {
     List<Component> components = new ArrayList<>();
 
     private SceneMenu() {
-        components.add(new SimpleRect(new BoundingBox(400, 300, 200, 100)));
+        components.add(new SimpleRect(new Bounds(400, 300, 200, 100)));
     }
 
     public static Scene getInstance() {
@@ -26,6 +26,11 @@ public class SceneMenu implements Scene {
 
         for (Component component : components) {
             component.draw(app);
+        }
+        for (Component component : components) {
+            if(component.handleClick(app.mouseX, app.mouseY)){
+                break;
+            }
         }
     }
 

@@ -1,7 +1,9 @@
 package ui;
 
+import layout.Bounds;
+
 public abstract class ComponentInteractive extends Component {
-    protected ComponentInteractive(BoundingBox bounds) {
+    protected ComponentInteractive(Bounds bounds) {
         super(bounds);
     }
 
