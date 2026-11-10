@@ -4,7 +4,11 @@ import processing.core.PApplet;
 import ui.Component;
 import ui.components.DebugButton;
 import ui.components.SimpleRect;
+import ui.components.Label;
 import ui.layout.Layout;
+import ui.text.PlainText;
+import ui.text.ShadowTextDecorator;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,14 +17,15 @@ public class SceneMenu implements Scene {
     List<Component> components = new ArrayList<>();
 
     private SceneMenu() {
-        components.add(new SimpleRect(
-                new Layout(0.5f, 0.5f, 0.5f, 0.5f)));
+        components.add(new Label(
+                new Layout(0.5f, 0.8f, 0.8f, 0.06f),
+                new PlainText("PLAIN TEXT"), 0xFFFFFFFF));
 
-        components.add(new DebugButton(
-                new Layout(0.25f, 0.25f, 0.5f, 0.5f)));
-
-        components.add(new DebugButton(
-                new Layout(0.55f, 0.5f, 0.5f, 0.5f)));
+        components.add(new Label(
+                new Layout(0.5f, 0.9f, 0.8f, 0.06f),
+                new ShadowTextDecorator(
+                        new PlainText("SHADOW TEXT"), 0xFF000000, 0.06f, 0.1f),
+                0xFFFFFFFF));
     }
 
     public static Scene getInstance() {
