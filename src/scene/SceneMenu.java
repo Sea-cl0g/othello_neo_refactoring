@@ -17,7 +17,10 @@ public class SceneMenu implements Scene {
                 new Layout(0.5f, 0.5f, 0.5f, 0.5f)));
 
         components.add(new DebugButton(
-                new Layout(0.5f, 0.5f, 0.5f, 0.5f)));
+                new Layout(0.25f, 0.25f, 0.5f, 0.5f)));
+
+        components.add(new DebugButton(
+                new Layout(0.55f, 0.5f, 0.5f, 0.5f)));
     }
 
     public static Scene getInstance() {
@@ -42,8 +45,8 @@ public class SceneMenu implements Scene {
 
     @Override
     public void mousePressed(PApplet app) {
-        for (Component component : components) {
-            if (component.handleClick(app.mouseX, app.mouseY)) {
+        for (int i = components.size() - 1; i >= 0; i--) {
+            if (components.get(i).handleClick(app.mouseX, app.mouseY)) {
                 break;
             }
         }
