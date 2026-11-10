@@ -4,6 +4,7 @@ import processing.core.PApplet;
 import layout.Bounds;
 import layout.Layout;
 import ui.Component;
+import ui.components.DebugButton;
 import ui.components.SimpleRect;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +15,12 @@ public class SceneMenu implements Scene {
 
     private SceneMenu() {
         components.add(new SimpleRect(
-            new Bounds(400, 300, 200, 100),
-            new Layout(0.5f, 0.5f, 0.5f, 0.5f)
-        ));
+                new Bounds(400, 300, 200, 100),
+                new Layout(0.5f, 0.5f, 0.5f, 0.5f)));
+
+        components.add(new DebugButton(
+                new Bounds(200, 300, 200, 100),
+                new Layout(0.5f, 0.5f, 0.5f, 0.5f)));
     }
 
     public static Scene getInstance() {
