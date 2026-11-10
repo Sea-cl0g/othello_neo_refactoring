@@ -11,11 +11,13 @@ public class Main extends PApplet {
 
     @Override
     public void settings() {
-        size(800, 600);
+        size(800, 500);
     }
 
     @Override
     public void setup() {
+        surface.setIcon(loadImage("assets/ai_character01_smile.png"));
+        surface.setResizable(true);
         rectMode(CENTER);
     }
 

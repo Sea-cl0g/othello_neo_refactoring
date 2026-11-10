@@ -10,10 +10,14 @@ public class SceneManager {
     private Scene scene = SceneMenu.getInstance();
     
     public void draw(PApplet app){
-        windowResized = lastWidth != app.width || lastHeight != app.height;
-        lastWidth = app.width;
-        lastHeight = app.height;
-        scene.draw(app, windowResized);
+        if (lastWidth != app.width || lastHeight != app.height) {
+            scene.applyLayout(app.width, app.height);
+            lastWidth = app.width;
+            lastHeight = app.height;
+            windowResized = false;
+        }
+
+        scene.draw(app);
     }
 
     

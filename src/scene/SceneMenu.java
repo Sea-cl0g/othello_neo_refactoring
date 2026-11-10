@@ -7,7 +7,6 @@ import ui.components.SimpleRect;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class SceneMenu implements Scene {
     private static SceneMenu instance = new SceneMenu();
     List<Component> components = new ArrayList<>();
@@ -21,19 +20,23 @@ public class SceneMenu implements Scene {
     }
 
     @Override
-    public void draw(PApplet app, windowResized) {
+    public void draw(PApplet app) {
         app.background(40);
 
         for (Component component : components) {
-            if(windowResized){
-                component.applyLayout(app.width, app.height);
-            }
             component.draw(app);
         }
         for (Component component : components) {
-            if(component.handleClick(app.mouseX, app.mouseY)){
+            if (component.handleClick(app.mouseX, app.mouseY)) {
                 break;
             }
+        }
+    }
+
+    @Override
+    public void applyLayout(int width, int height) {
+        for (Component component : components) {
+            component.applyLayout(width, height);
         }
     }
 
