@@ -21,10 +21,13 @@ public class SceneMenu implements Scene {
     }
 
     @Override
-    public void draw(PApplet app) {
+    public void draw(PApplet app, windowResized) {
         app.background(40);
 
         for (Component component : components) {
+            if(windowResized){
+                component.applyLayout(app.width, app.height);
+            }
             component.draw(app);
         }
         for (Component component : components) {
