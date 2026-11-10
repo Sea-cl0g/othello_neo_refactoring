@@ -26,12 +26,7 @@ public class SceneMenu implements Scene {
         for (Component component : components) {
             component.draw(app);
         }
-        for (Component component : components) {
-            if (component.handleClick(app.mouseX, app.mouseY)) {
-                break;
             }
-        }
-    }
 
     @Override
     public void applyLayout(int width, int height) {
@@ -41,12 +36,16 @@ public class SceneMenu implements Scene {
     }
 
     @Override
-    public void mousePressed() {
-        System.err.println("mouse");
+    public void mousePressed(PApplet app) {
+        for (Component component : components) {
+            if (component.handleClick(app.mouseX, app.mouseY)) {
+                break;
+            }
+        }
     }
 
     @Override
-    public void keyPressed() {
+    public void keyPressed(PApplet app) {
         System.err.println("key");
     }
 }

@@ -20,5 +20,7 @@ public class SceneManager {
         scene.draw(app);
     }
 
-    
+    public void mousePressed(PApplet app){
+        scene.mousePressed(app);
+    }
 }

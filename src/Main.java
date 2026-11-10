@@ -25,4 +25,9 @@ public class Main extends PApplet {
     public void draw() {
         scene.draw(this);
     }
+
+    @Override
+    public void mousePressed() {
+        scene.mousePressed(this);
+    }
 }
