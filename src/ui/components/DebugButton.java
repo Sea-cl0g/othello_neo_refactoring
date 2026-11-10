@@ -8,8 +8,8 @@ import ui.ComponentInteractive;
 public class DebugButton extends ComponentInteractive {
     boolean clicked = false;
 
-    public DebugButton(Bounds bounds, Layout layout) {
-        super(bounds, layout);
+    public DebugButton(Layout layout) {
+        super(layout);
     }
 
     @Override

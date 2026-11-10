@@ -6,8 +6,8 @@ import layout.Bounds;
 import layout.Layout;
 
 public class SimpleRect extends Component {
-    public SimpleRect(Bounds bounds, Layout layout) {
-        super(bounds, layout);
+    public SimpleRect(Layout layout) {
+        super(layout);
     }
 
     @Override
@@ -19,9 +19,8 @@ public class SimpleRect extends Component {
         app.noStroke();
         app.fill(255);
         app.rect(
-            bounds.getX(), bounds.getY(),
-            bounds.getWidth(), bounds.getHeight()
-        );
+                bounds.getX(), bounds.getY(),
+                bounds.getWidth(), bounds.getHeight());
         app.popStyle();
     }
 }
