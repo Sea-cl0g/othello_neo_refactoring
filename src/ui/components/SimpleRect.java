@@ -1,12 +1,13 @@
 package ui.components;
 
-import layout.Bounds;
 import processing.core.PApplet;
 import ui.Component;
+import layout.Bounds;
+import layout.Layout;
 
 public class SimpleRect extends Component {
-    public SimpleRect(Bounds bounds) {
-        super(bounds);
+    public SimpleRect(Bounds bounds, Layout layout) {
+        super(bounds, layout);
     }
 
     @Override

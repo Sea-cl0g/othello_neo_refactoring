@@ -8,8 +8,9 @@ public abstract class Component {
     private Bounds bounds;
     private Layout layout;
 
-    protected Component(Bounds bouds) {
+    protected Component(Bounds bouds, Layout layout) {
         this.bounds = bouds;
+        this.layout = layout;
     }
 
     protected Bounds getBounds() {

@@ -2,6 +2,7 @@ package scene;
 
 import processing.core.PApplet;
 import layout.Bounds;
+import layout.Layout;
 import ui.Component;
 import ui.components.SimpleRect;
 import java.util.ArrayList;
@@ -12,7 +13,10 @@ public class SceneMenu implements Scene {
     List<Component> components = new ArrayList<>();
 
     private SceneMenu() {
-        components.add(new SimpleRect(new Bounds(400, 300, 200, 100)));
+        components.add(new SimpleRect(
+            new Bounds(400, 300, 200, 100),
+            new Layout(0.5f, 0.5f, 0.5f, 0.5f)
+        ));
     }
 
     public static Scene getInstance() {
@@ -26,7 +30,7 @@ public class SceneMenu implements Scene {
         for (Component component : components) {
             component.draw(app);
         }
-            }
+    }
 
     @Override
     public void applyLayout(int width, int height) {
