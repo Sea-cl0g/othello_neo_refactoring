@@ -21,6 +21,6 @@ public class Main extends PApplet {
 
     @Override
     public void draw() {
-        scene.draw();
+        scene.draw(this);
     }
 }

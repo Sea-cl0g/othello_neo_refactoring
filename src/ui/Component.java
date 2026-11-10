@@ -1,5 +1,7 @@
 package ui;
 
+import processing.core.PApplet;
+
 public abstract class Component {
     private BoundingBox bounds;
 
@@ -14,4 +16,6 @@ public abstract class Component {
     public boolean handleClick(int px, int py) {
         return false;
     }
+
+    public abstract void draw(PApplet app);
 }
