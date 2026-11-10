@@ -1,9 +1,9 @@
 package scene;
 
-public class MenuScene implements Scene {
-    private static MenuScene instance = new MenuScene();
+public class SceneMenu implements Scene {
+    private static SceneMenu instance = new SceneMenu();
     
-    private MenuScene(){   
+    private SceneMenu(){   
     }
 
     public static Scene getInstance(){
