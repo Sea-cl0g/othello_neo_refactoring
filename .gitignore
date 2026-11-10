@@ -1,3 +1,4 @@
 .vscode/*
 windows-amd64/*
-data/save_data.json
+/data/save_data.json
+lib/*
