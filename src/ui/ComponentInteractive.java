@@ -1,10 +1,11 @@
 package ui;
 
 import layout.Bounds;
+import layout.Layout;
 
 public abstract class ComponentInteractive extends Component {
-    protected ComponentInteractive(Bounds bounds) {
-        super(bounds);
+    protected ComponentInteractive(Bounds bounds, Layout layout) {
+        super(bounds, layout);
     }
 
     @Override
