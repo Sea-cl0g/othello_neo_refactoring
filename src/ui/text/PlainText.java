@@ -4,9 +4,15 @@ import processing.core.PApplet;
 
 public class PlainText implements TextRenderer {
     private String text;
+    private final int align;
 
     public PlainText(String text) {
+        this(text, PApplet.CENTER);
+    }
+
+    public PlainText(String text, int align) {
         this.text = text;
+        this.align = align;
     }
 
     public void setText(String text) {
@@ -21,7 +27,7 @@ public class PlainText implements TextRenderer {
     @Override
     public void draw(PApplet app, float x, float y, float size, int color, String text) {
         app.pushStyle();
-        app.textAlign(PApplet.CENTER, PApplet.CENTER);
+        app.textAlign(align, PApplet.CENTER);
         app.textSize(size);
         app.fill(color);
         app.text(text, x, y);

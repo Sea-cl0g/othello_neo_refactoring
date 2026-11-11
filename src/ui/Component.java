@@ -39,6 +39,13 @@ public abstract class Component {
     public void resetHover() {
     }
 
+    public void clearFocus() {
+    }
+
+    public boolean handleKeyPressed(PApplet app) {
+        return false;
+    }
+
     public void draw(PApplet app, boolean hovered) {
         draw(app);
     }
