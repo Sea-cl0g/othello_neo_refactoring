@@ -42,6 +42,10 @@ public class SceneMenu implements Scene {
     @Override
     public void draw(PApplet app) {
         app.background(40);
+        for (Component component : components) {
+            component.resetHover();
+        }
+        
         for (int i = components.size() - 1; i >= 0; i--) {
             if (components.get(i).handleHover(app.mouseX, app.mouseY)) {
                 break;
