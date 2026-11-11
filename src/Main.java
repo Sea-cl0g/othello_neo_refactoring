@@ -19,6 +19,8 @@ public class Main extends PApplet {
         surface.setIcon(loadImage("assets/ai_character01_smile.png"));
         surface.setResizable(true);
         rectMode(CENTER);
+        hint(ENABLE_KEY_REPEAT);
+        scene.initialize(this);
     }
 
     @Override
@@ -29,5 +31,10 @@ public class Main extends PApplet {
     @Override
     public void mousePressed() {
         scene.mousePressed(this);
+    }
+
+    @Override
+    public void keyPressed() {
+        scene.keyPressed(this);
     }
 }

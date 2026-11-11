@@ -32,11 +32,17 @@ abstract class ComponentScene implements Scene {
         return new Button(layout, content, action, colors.panel, colors.text);
     }
 
-    protected PlainText label(String text, Layout layout, MenuColors colors) {
-        PlainText value = new PlainText(text);
-        components.add(new Label(layout,
-                new ShadowTextDecorator(value, colors.shadow, 0, 0.1f), colors.text));
-        return value;
+    protected Button arrowButton(Layout layout, Runnable action, MenuColors colors) {
+        Label arrow = new Label(new Layout(0.5f, 0.4f, 1, 1), new PlainText("←"), colors.text);
+        return new Button(layout, arrow, action, colors.board, colors.text);
+    }
+
+    protected Label label(String text, Layout layout, MenuColors colors) {
+        return label(new PlainText(text), layout, colors);
+    }
+
+    protected Label label(PlainText text, Layout layout, MenuColors colors) {
+        return new Label(layout, new ShadowTextDecorator(text, colors.shadow, 0, 0.1f), colors.text);
     }
 
     @Override
@@ -64,6 +70,7 @@ abstract class ComponentScene implements Scene {
 
     @Override
     public void mousePressed(PApplet app) {
+        clearFocus();
         for (int i = components.size() - 1; i >= 0; i--) {
             if (components.get(i).handleClick(app.mouseX, app.mouseY)) {
                 break;
@@ -73,5 +80,16 @@ abstract class ComponentScene implements Scene {
 
     @Override
     public void keyPressed(PApplet app) {
+        for (int i = components.size() - 1; i >= 0; i--) {
+            if (components.get(i).handleKeyPressed(app)) {
+                break;
+            }
+        }
+    }
+
+    void clearFocus() {
+        for (Component component : components) {
+            component.clearFocus();
+        }
     }
 }
