@@ -21,11 +21,22 @@ abstract class ComponentScene implements Scene {
     }
 
     protected Button textButton(String text, float yRatio, Runnable action, MenuColors colors) {
+        return textButton(text, new Layout(5f / 6f, yRatio, 0.21f, 0.1f), action, colors);
+    }
+
+    protected Button textButton(String text, Layout layout, Runnable action, MenuColors colors) {
         Label content = new Label(new Layout(0.5f, 0.5f, 1, 2f / 3f),
                 new ShadowTextDecorator(new HoverTextDecorator(new PlainText(text)),
-                        colors.shadow, 0, 0.1f), colors.text);
-        return new Button(new Layout(5f / 6f, yRatio, 0.21f, 0.1f),
-                content, action, colors.panel, colors.text);
+                        colors.shadow, 0, 0.1f),
+                colors.text);
+        return new Button(layout, content, action, colors.panel, colors.text);
+    }
+
+    protected PlainText label(String text, Layout layout, MenuColors colors) {
+        PlainText value = new PlainText(text);
+        components.add(new Label(layout,
+                new ShadowTextDecorator(value, colors.shadow, 0, 0.1f), colors.text));
+        return value;
     }
 
     @Override

@@ -3,9 +3,13 @@ package ui.text;
 import processing.core.PApplet;
 
 public class PlainText implements TextRenderer {
-    private final String text;
+    private String text;
 
     public PlainText(String text) {
+        this.text = text;
+    }
+
+    public void setText(String text) {
         this.text = text;
     }
 
