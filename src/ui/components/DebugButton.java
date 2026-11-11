@@ -34,4 +34,8 @@ public class DebugButton extends ComponentInteractive {
     public void onClick() {
         clicked = !clicked;
     }
+
+    @Override
+    protected void onHover() {
+    }
 }

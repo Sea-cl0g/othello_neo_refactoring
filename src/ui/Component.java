@@ -32,5 +32,9 @@ public abstract class Component {
         return false;
     }
 
+    public boolean handleHover(int px, int py) {
+        return false;
+    }
+
     public abstract void draw(PApplet app);
 }

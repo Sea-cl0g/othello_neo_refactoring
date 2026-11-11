@@ -44,4 +44,8 @@ public class Button extends ComponentInteractive {
     protected void onClick() {
         action.run();
     }
+
+    @Override
+    protected void onHover() {
+    }
 }
