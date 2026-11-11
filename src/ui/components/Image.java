@@ -41,11 +41,14 @@ public class Image extends Component {
                 shape.disableStyle();
             }
             Bounds bounds = getBounds();
+            float scale = Math.min(bounds.getWidth() / shape.getWidth(), bounds.getHeight() / shape.getHeight());
+            float drawWidth = shape.getWidth() * scale;
+            float drawHeight = shape.getHeight() * scale;
             app.pushStyle();
             app.shapeMode(PApplet.CENTER);
             app.noStroke();
             app.fill(hovered ? hoverColor : color);
-            app.shape(shape, bounds.getX(), bounds.getY(), bounds.getWidth(), bounds.getHeight());
+            app.shape(shape, bounds.getX(), bounds.getY(), drawWidth, drawHeight);
             app.popStyle();
             return;
         }
