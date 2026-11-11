@@ -21,4 +21,15 @@ public class Layout {
             Math.round(height * heightRatio)
         );
     }
+
+    public void apply(Bounds bounds, Bounds parent) {
+        int parentX = parent.getX() - parent.getWidth() / 2;
+        int parentY = parent.getY() - parent.getHeight() / 2;
+        bounds.setBounds(
+            parentX + Math.round(parent.getWidth() * xRatio),
+            parentY + Math.round(parent.getHeight() * yRatio),
+            Math.round(parent.getWidth() * widthRatio),
+            Math.round(parent.getHeight() * heightRatio)
+        );
+    }
 }

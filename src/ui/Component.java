@@ -6,7 +6,7 @@ import ui.layout.Layout;
 
 public abstract class Component {
     private final Bounds bounds = new Bounds(0, 0, 0, 0);
-    private Layout layout;
+    private final Layout layout;
 
     protected Component(Layout layout) {
         this.layout = layout;
@@ -22,6 +22,10 @@ public abstract class Component {
 
     public void applyLayout(int width, int height) {
         layout.apply(getBounds(), width, height);
+    }
+
+    public void applyLayout(Bounds parentBounds) {
+        layout.apply(getBounds(), parentBounds);
     }
 
     public boolean handleClick(int px, int py) {
