@@ -18,9 +18,14 @@ public class Label extends Component {
 
     @Override
     public void draw(PApplet app) {
+        draw(app, false);
+    }
+
+    @Override
+    public void draw(PApplet app, boolean hovered) {
         Bounds bounds = getBounds();
         if (bounds.getHeight() > 0) {
-            text.draw(app, bounds.getX(), bounds.getY(), bounds.getHeight(), color);
+            text.draw(app, bounds.getX(), bounds.getY(), bounds.getHeight(), color, hovered);
         }
     }
 }

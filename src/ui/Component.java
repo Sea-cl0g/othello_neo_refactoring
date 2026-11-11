@@ -36,5 +36,12 @@ public abstract class Component {
         return false;
     }
 
+    public void resetHover() {
+    }
+
+    public void draw(PApplet app, boolean hovered) {
+        draw(app);
+    }
+
     public abstract void draw(PApplet app);
 }

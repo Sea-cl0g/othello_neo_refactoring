@@ -33,11 +33,15 @@ public class Button extends ComponentInteractive {
         app.pushStyle();
         app.rectMode(PApplet.CENTER);
         app.noStroke();
-        app.fill(bounds.contains(app.mouseX, app.mouseY) ? hoverColor : backgroundColor);
+        if (isHoverd) {
+            app.stroke(hoverColor);
+            app.strokeWeight(app.height / 150);
+        }
+        app.fill(backgroundColor);
         app.rect(bounds.getX(), bounds.getY(), bounds.getWidth(), bounds.getHeight());
         app.popStyle();
 
-        content.draw(app);
+        content.draw(app, isHoverd);
     }
 
     @Override
@@ -48,4 +52,5 @@ public class Button extends ComponentInteractive {
     @Override
     protected void onHover() {
     }
+
 }

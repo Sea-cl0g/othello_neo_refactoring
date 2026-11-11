@@ -7,6 +7,7 @@ import ui.components.ImageView;
 import ui.components.Label;
 import ui.layout.Layout;
 import ui.text.PlainText;
+import ui.text.HoverTextDecorator;
 import ui.text.ShadowTextDecorator;
 
 import java.util.ArrayList;
@@ -21,10 +22,11 @@ public class SceneMenu implements Scene {
                 new Layout(0.5f, 0.38f, 0.36f, 0.16f),
                 new Label(
                         new Layout(0.5f, 0.5f, 0.85f, 0.65f),
-                        new ShadowTextDecorator(new PlainText("PLAY"), 0xFF000000, 0.06f, 0.1f),
+                        new ShadowTextDecorator(
+                                new HoverTextDecorator(new PlainText("PLAY")), 0xFF000000, 0.06f, 0.1f),
                         0xFFFFFFFF),
                 () -> System.out.println("test"),
-                0xFF555555, 0xFF777777));
+                0xFF555555, 0xFFFFFFFF));
 
         components.add(new Button(
                 new Layout(0.5f, 0.66f, 0.36f, 0.16f),
@@ -32,7 +34,7 @@ public class SceneMenu implements Scene {
                         new Layout(0.5f, 0.5f, 0.65f, 0.8f),
                         "assets/ai_character01_smile.png"),
                 () -> System.out.println("testsaaa"),
-                0xFF555555, 0xFF777777));
+                0xFF555555, 0xFFFFFFFF));
     }
 
     public static Scene getInstance() {

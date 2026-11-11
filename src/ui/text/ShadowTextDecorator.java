@@ -16,8 +16,19 @@ public class ShadowTextDecorator implements TextRenderer {
     }
 
     @Override
-    public void draw(PApplet app, float x, float y, float size, int color) {
-        inner.draw(app, x + size * offsetXRatio, y + size * offsetYRatio, size, shadowColor);
-        inner.draw(app, x, y, size, color);
+    public String getText() {
+        return inner.getText();
+    }
+
+    @Override
+    public void draw(PApplet app, float x, float y, float size, int color, String text) {
+        inner.draw(app, x + size * offsetXRatio, y + size * offsetYRatio, size, shadowColor, text);
+        inner.draw(app, x, y, size, color, text);
+    }
+
+    @Override
+    public void draw(PApplet app, float x, float y, float size, int color, boolean hovered) {
+        inner.draw(app, x + size * offsetXRatio, y + size * offsetYRatio, size, shadowColor, hovered);
+        inner.draw(app, x, y, size, color, hovered);
     }
 }

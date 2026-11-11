@@ -10,7 +10,12 @@ public class PlainText implements TextRenderer {
     }
 
     @Override
-    public void draw(PApplet app, float x, float y, float size, int color) {
+    public String getText() {
+        return text;
+    }
+
+    @Override
+    public void draw(PApplet app, float x, float y, float size, int color, String text) {
         app.pushStyle();
         app.textAlign(PApplet.CENTER, PApplet.CENTER);
         app.textSize(size);
