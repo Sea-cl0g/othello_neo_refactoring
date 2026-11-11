@@ -7,6 +7,7 @@
 7. 7は取りやめて単純にループで回すことにした。今回は処理（描画や画面サイズの変更に応じたUIサイズの変更）を各クラス（やフィールドのBoundingBox）が持っているためである。Visitorは各要素に対する操作を持たせるときに活用できるのだと理解した。
 8. Textを描画するためのインターフェースTextRenderはDecoratorを使っている。これによりLabelやButtonなどでは特に中身を気にしないまま影付き文字にできている。
 9. ホバー時の処理もChain of Responsibilityパターンを使ってる。
+10. ParallaxGroupはComponentの集合だがCompositeパターンを利用することで、Componentと同じように利用している。
 
 
 ai
